@@ -40,9 +40,27 @@ y = x ** 2
 
 # Figure subplots
 # 2 rows and three column
-fig, axes = plt.subplots(nrows=2, ncols=3)
+# fig, axes = plt.subplots(nrows=2, ncols=3)
 # Save the graph as png
-fig.savefig("plot.png", dpi=200)
+# fig.savefig("plot.png", dpi=200)
+
+# Axis test, show label and legends at given location
+# fig = plt.figure()
+# axes1 = fig.add_axes([0.1,0.1,.8,.8])
+# axes1.plot(x,x**2,label = "Squared")
+# axes1.plot(x,x**3, label = "cubed")
+# axes1.plot(x,x**4, label ="Power 4")
+# axes1.plot(x,x**5, label = "Power 5")
+# axes1.plot(x,x**6, label = "Power 6")
+# axes1.legend(loc = 0)
+# fig.savefig("multipicatin_graph.png")
+
+# Figure with color, alpha is show the transparency's level, and different style
+fig = plt.figure()
+axes = fig.add_axes([.1, .1, .8, .8])
+axes.plot(x, y, color='red', linewidth=2, alpha=.5, linestyle="--", marker="o", markersize=10
+          , markerfacecolor='yellow', markeredgewidth=3, markeredgecolor='green')
+# plt.scatter(x,y)
 
 # to show the plot
 plt.show()
